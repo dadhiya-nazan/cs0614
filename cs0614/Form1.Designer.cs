@@ -40,7 +40,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(160, 184);
+            label1.Location = new Point(12, 89);
             label1.Name = "label1";
             label1.Size = new Size(90, 37);
             label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(332, 184);
+            label2.Location = new Point(290, 212);
             label2.Name = "label2";
             label2.Size = new Size(90, 37);
             label2.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(495, 184);
+            label3.Location = new Point(583, 89);
             label3.Name = "label3";
             label3.Size = new Size(90, 37);
             label3.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(270, 284);
+            button1.Location = new Point(347, 424);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 3;
