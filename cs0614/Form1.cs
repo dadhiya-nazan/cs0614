@@ -3,38 +3,35 @@ namespace cs0614
     public partial class Form1 : Form
     {
         static Random random = new Random();
-        int[] vx = new int[3];
-        int[] vy = new int[3];
+        /*int[] vx = new int[3];
+        int[] vy = new int[3];*/
 
         public Form1()
         {
             InitializeComponent();
-
+/*
             vx[0] = random.Next(-10, 11);
             vy[0] = random.Next(-10, 11);
             vx[1] = random.Next(-10, 11);
             vy[1] = random.Next(-10, 11);
             vx[2] = random.Next(-10, 11);
             vy[2] = random.Next(-10, 11);
-
+*/
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            vx[0] = vx[0] * 2;
-            vy[0] = vy[0] * 2;
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            vx[1] = vx[1] * 2;
-            vy[1] = vy[1] * 2;
+           
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            vx[2] = vx[2] * 2;
-            vy[2] = vy[2] * 2;
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -49,7 +46,31 @@ namespace cs0614
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Left += vx[0];
+            for (int i = 1; i < 4; i++)
+            {
+                vx[i] = random.Next(-10, 11);
+                vy[i] = random.Next(-10, 11);
+                label[i].Left += vx[i];
+                label1.Top += vy[i];
+
+                if (label1.Left < 0)
+                {
+                    vx[i] = Math.Abs(vx[i]);
+                }
+                else if (label1.Left > (ClientSize.Width - label1.Width))
+                {
+                    vx[i] = -Math.Abs(vx[i]);
+                }
+                else if (label1.Top < i)
+                {
+                    vy[i] = Math.Abs(vy[i]);
+                }
+                else if (label1.Top > (ClientSize.Height - label1.Height))
+                {
+                    vy[i] = -Math.Abs(vy[i]);
+                }
+            }
+            /*label1.Left += vx[0];
             label1.Top += vy[0];
 
             if (label1.Left < 0)
@@ -109,9 +130,16 @@ namespace cs0614
             else if (label3.Top > (ClientSize.Height - label3.Height))
             {
                 vy[2] = -Math.Abs(vy[2]);
-            }
+            }*/
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                MessageBox.Show($"{i}");
+            }
 
+        }
     }
 }
