@@ -16,6 +16,14 @@ namespace cs0614
                 vy[i] = random.Next(-10, 11);
             }
 
+            /*
+            vx[0] = random.Next(-10, 11);
+            vy[0] = random.Next(-10, 11);
+            vx[1] = random.Next(-10, 11);
+            vy[1] = random.Next(-10, 11);
+            vx[2] = random.Next(-10, 11);
+            vy[2] = random.Next(-10, 11);
+            */
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -116,6 +124,23 @@ namespace cs0614
             for (int i = 0; i < 10; i++)
             {
                 MessageBox.Show($"{i}");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int i;
+            for (i = 0; i < 10; i++)
+            {
+                if (i == 2)
+                {
+                    continue;
+                }
+                if (i == 5)
+                {
+                    break;
+                }
+                MessageBox.Show(i.ToString());
             }
         }
     }
