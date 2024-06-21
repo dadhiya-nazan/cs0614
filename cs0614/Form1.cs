@@ -2,16 +2,18 @@
 {
     public partial class Form1 : Form
     {
+        static int ChrMax => 100;
+
         static Random random = new Random();
-        int[] vx = new int[100];
-        int[] vy = new int[100];
-        Label[] labels = new Label[100];//ラベル100個分の空きを確保
+        int[] vx = new int[ChrMax];
+        int[] vy = new int[ChrMax];
+        Label[] labels = new Label[ChrMax];//ラベル100個分の空きを確保
 
         public Form1()
         {
             InitializeComponent();
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < ChrMax; i++)
             {
                 labels[i] = new Label();//管理する領域を生成
                 labels[i].AutoSize = true;
@@ -55,10 +57,10 @@
         {
 
         }
- 
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < ChrMax; i++)
             {
                 labels[i].Left += vx[i];
                 labels[i].Top += vy[i];

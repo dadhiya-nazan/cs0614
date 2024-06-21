@@ -51,6 +51,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.White;
             label2.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(290, 212);
             label2.Name = "label2";
